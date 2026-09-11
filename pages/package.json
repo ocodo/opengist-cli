@@ -12,6 +12,7 @@
     "deploy-pages": "pnpm run build && pnpm run pages"
   },
   "dependencies": {
+    "@highlightjs/cdn-assets": "^11.12.0",
     "@radix-ui/react-slot": "latest",
     "class-variance-authority": "latest",
     "clsx": "latest",
@@ -29,6 +30,7 @@
     "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react": "latest",
     "gh-pages": "^6.3.0",
+    "rehype-highlight": "^7.0.2",
     "tailwindcss": "^4.0.0",
     "tailwindcss-animate": "latest",
     "typescript": "latest",
