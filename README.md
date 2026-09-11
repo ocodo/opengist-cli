@@ -21,7 +21,7 @@ Config:
 - Requires an opengist token and host url
 - set env vars OPENGIST_CLI_TOKEN OPENGIST_CLI_URL	
 
-Run 'opengist-cli <command> --help' for command-specific help.
+Run `opengist-cli <command> --help` for command-specific help.
 
 ### Licence
 
