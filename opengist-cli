@@ -4,6 +4,7 @@
 # requires-python = ">=3.11"
 # dependencies = [
 #   "httpx",
+#   "wcwidth",
 # ]
 # ///
 
@@ -14,6 +15,16 @@ import sys
 from pathlib import Path
 
 import httpx
+from wcwidth import wcswidth
+
+
+def _width(s: str) -> int:
+    w = wcswidth(s)
+    return w if w >= 0 else len(s)
+
+
+def _pad(s: str, w: int) -> str:
+    return s + " " * (w - _width(s))
 
 
 class ConfigError(Exception):
@@ -223,6 +234,7 @@ def parser_for(command: str) -> Parser:
         parser.add_argument("gist")
     elif command == "list":
         parser.add_argument("-h", "--help", action="store_true")
+        parser.add_argument("--markdown", action="store_true")
         parser.add_argument("--page", type=int, default=1)
         parser.add_argument("--per-page", type=int, default=30)
         parser.add_argument("username", nargs="?")
@@ -382,17 +394,35 @@ def list_gists(args: argparse.Namespace) -> int:
         print("No gists found.")
         return 0
 
-    print(f"{'URL':<60}  {'TITLE':<40}  UPDATED")
-    print(f"{'-' * 60}  {'-' * 40}  {'-' * 20}")
+    if args.markdown:
+        markdown_table(gists)
+    else:
+        text_list(gists)
 
-    for gist in gists:
-        url = gist.get("html_url") or ""
-        title = gist.get("title") or ""
-        updated = gist.get("updated_at") or gist.get("created_at") or ""
 
-        print(f"{url:<60}  {title:<40}  {updated}")
+def text_list(gists):
+    rows = [(g.get("title") or "", g.get("html_url") or "") for g in gists]
 
-    return 0
+    title_w = max(_width("title"), max(_width(t) for t, _ in rows))
+    url_w = max(_width("url"), max(_width(u) for _, u in rows))
+
+    print(f"{'title':<{title_w}} {'url':<{url_w}}\n")
+
+    for title, url in rows:
+        print(f"{title:<{title_w}} {url:<{url_w}}")
+
+
+def markdown_table(gists):
+    rows = [(g.get("title") or "", g.get("html_url") or "") for g in gists]
+
+    title_w = max(_width("title"), max(_width(t) for t, _ in rows))
+    url_w = max(_width("url"), max(_width(u) for _, u in rows))
+
+    print(f"| {'title':<{title_w}} | {'url':<{url_w}} |")
+    print("|-|-|")
+
+    for title, url in rows:
+        print(f"| {title:<{title_w}} | {url:<{url_w}} |")
 
 
 COMMAND_HELP = {
