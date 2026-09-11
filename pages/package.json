@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "pages": "gh-pages -d dist",
+    "deploy-pages": "pnpm run build && pnpm run pages"
   },
   "dependencies": {
     "@radix-ui/react-slot": "latest",
