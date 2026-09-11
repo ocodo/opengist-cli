@@ -1,3 +1,5 @@
+![License: GNU AGPL v3](https://img.shields.io/badge/License-agpl3.0-blue.svg)
+
 # Opengist-CLI
 
 CLI for Opengist
