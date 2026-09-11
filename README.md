@@ -6,6 +6,7 @@ CLI for Opengist
 
 ## Install
 
+Requires [uv](https://github.com/astral-sh/uv)
 
 Usage:
 
