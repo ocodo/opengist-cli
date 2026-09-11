@@ -1,4 +1,4 @@
-# OpenGist-CLI
+# Opengist-CLI
 
 CLI for Opengist
 
