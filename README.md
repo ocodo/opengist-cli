@@ -16,6 +16,8 @@ Requires [uv](https://github.com/astral-sh/uv)
 git clone git@github.com:ocodo/opengist-cli
 ```
 
+Or [direct download](opengist-cli)
+
 ## Usage
 
 copy opengist-cli to your path e.g. `~/.local/bin/`
@@ -32,7 +34,9 @@ Commands:
 
 Config:
 
-Requires an opengist host url and access token.  Use env vars
+Requires an opengist host url and access token.
+
+Use these env vars
 
 ```bash
 OPENGIST_CLI_TOKEN # opengist user access token
