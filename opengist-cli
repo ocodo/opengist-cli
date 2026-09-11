@@ -32,16 +32,16 @@ class ConfigError(Exception):
 
 
 def get_token() -> str:
-    token = os.environ.get("OPENGIST_TOKEN")
+    token = os.environ.get("OPENGIST_CLI_TOKEN")
     if not token:
-        raise ConfigError("OPENGIST_TOKEN is not set")
+        raise ConfigError("OPENGIST_CLI_TOKEN is not set")
     return token
 
 
 def get_opengist_url() -> str:
-    url = os.environ.get("OPENGIST_URL")
+    url = os.environ.get("OPENGIST_CLI_URL")
     if not url:
-        raise ConfigError("OPENGIST_URL is not set")
+        raise ConfigError("OPENGIST_CLI_URL is not set")
     return url
 
 
@@ -66,6 +66,11 @@ Commands:
   edit      Edit an existing gist
   delete    Delete a gist
   list      List gists
+
+Config:
+
+- Requires an opengist token and host url
+- set env vars OPENGIST_CLI_TOKEN OPENGIST_CLI_URL
 
 Run 'opengist-cli <command> --help' for command-specific help.
 """
@@ -136,6 +141,7 @@ Arguments:
 Options:
       --page PAGENUM        Page number (default: 1)
       --per-page NUM        Number of gists per page (default: 30)
+      --markdown            format list as markdown table
   -h, --help                Show this help
 
 Examples:
@@ -143,6 +149,7 @@ Examples:
   opengist-cli list --page 2
   opengist-cli list --per-page 10
   opengist-cli list --page 2 --per-page 10
+  opengist-cli list --page 2 --per-page 10 --markdown
   opengist-cli list jason
 """
 
