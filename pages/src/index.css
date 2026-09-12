@@ -2,7 +2,12 @@
 @plugin "tailwindcss-animate";
 @plugin "@tailwindcss/typography";
 
-/* Font-face moved to main.tsx for proper Vite asset resolution */
+@font-face {
+  src: url("/OcodoMonoDotZeroNerdFont-Light.woff2");
+  font-family: "OMDZero";
+  font-weight: 300;
+  font-style: normal;
+}
 
 :root {
   font-family: Urbanist, sans-serif;
