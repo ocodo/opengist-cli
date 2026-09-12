@@ -38,6 +38,11 @@ jobs:
       - name: Build
         run: pnpm vite build
 
+      - name: Ensure font assets are in dist
+        run: |
+          ls -a dist
+          cp -v dist/*.woff2 dist/assets/
+
       - name: Deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
