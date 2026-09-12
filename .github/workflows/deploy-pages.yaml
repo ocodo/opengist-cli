@@ -38,11 +38,6 @@ jobs:
       - name: Build
         run: pnpm vite build
 
-      - name: Ensure font assets are in dist
-        run: |
-          tree
-          mv -v dist/*.woff2 dist/assets/
-
       - name: Deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -51,6 +46,3 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           pnpm gh-pages -d dist
-          cd dist
-          tree
-
