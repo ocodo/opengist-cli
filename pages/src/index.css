@@ -3,7 +3,7 @@
 @plugin "@tailwindcss/typography";
 
 @font-face {
-  src: url("/assets/OcodoMonoDotZeroNerdFont-Light.woff2");
+  src: url("./OcodoMonoDotZeroNerdFont-Light.woff2");
   font-family: "OMDZero";
   font-weight: 300;
   font-style: normal;
@@ -88,7 +88,7 @@ pre, code {
   --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border);
+  --color-border: var(--color-border);
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-background-grad-a: var(--background-grad-a);
