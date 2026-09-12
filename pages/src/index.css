@@ -4,7 +4,9 @@
 
 @font-face {
   font-family: "OMDZero";
-  src: url("./assets/OcodoMonoDotZeroNerdFont-Light.woff2");
+  src: url("https://cdn.jsdelivr.net/npm/@jasonm23/ocodo-mono-dotzero-nerd@1.0.0/fonts/OcodoMonoDotZeroNerdFont-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
 }
 
 :root {
