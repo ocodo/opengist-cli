@@ -27,7 +27,7 @@ export const App = () => (
 
       <div className="flex flex-wrap gap-2 text-sm justify-center font-light">
         Download <a href="opengist-cli" download="opengist-cli" className="decoration-0 hover:decoration-1">opengist-cli</a>
-        requires <a href="https://github.com/astral-sh/uv" target="_blank" className="decoration-0 hover:decoration-1">uv,</a> runs on all platforms uv does
+        requires <a href="https://github.com/astral-sh/uv" target="_blank" className="decoration-0 hover:decoration-1">uv,</a> runs on any platform supported by uv
       </div>
 
       <Markdown rehypePlugins={[rehypeHighlight]}>
