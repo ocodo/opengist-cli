@@ -3,10 +3,8 @@
 @plugin "@tailwindcss/typography";
 
 @font-face {
-  src: url("/OcodoMonoDotZeroNerdFont-Light.woff2");
   font-family: "OMDZero";
-  font-weight: 300;
-  font-style: normal;
+  src: url("/OcodoMonoDotZeroNerdFont-Light.woff2");
 }
 
 :root {
