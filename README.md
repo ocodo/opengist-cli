@@ -8,16 +8,6 @@ opengist-cli lets you manage your Opengist snippets directly from the terminal, 
 
 It is designed to be lightweight and Unix-friendly, with configuration provided through environment variables so it can easily fit into shell scripts, dotfiles, and automated workflows.
 
-## Install
-
-Requires [uv](https://github.com/astral-sh/uv)
-
-```bash
-git clone git@github.com:ocodo/opengist-cli
-```
-
-Or [direct download](opengist-cli)
-
 ## Usage
 
 copy opengist-cli to your path e.g. `~/.local/bin/`
@@ -31,7 +21,7 @@ Commands:
 - `edit`:      Edit an existing gist
 - `delete`:    Delete a gist
 - `list`:      List gists
-
+ 
 Config:
 
 Requires an opengist host url and access token.
@@ -48,6 +38,18 @@ for command-specific help run:
 ```bash
 opengist-cli <command> --help
 ```
+
+## Install
+
+Requires [uv](https://github.com/astral-sh/uv)
+
+```bash
+git clone git@github.com:ocodo/opengist-cli
+```
+
+Or [direct download](opengist-cli)
+
+
 
 
 ### Licence
