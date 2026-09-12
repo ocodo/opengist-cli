@@ -2,6 +2,21 @@
 @plugin "tailwindcss-animate";
 @plugin "@tailwindcss/typography";
 
+@font-face {
+  font-family: OcodoMonoDotZero;
+  font-weight: 300;
+  font-style: normal;
+  src: url("OcodoMonoDotZeroNerdFont-Light.woff2");
+}
+
+:root {
+  font-family: Urbanist, sans-serif;
+}
+
+pre, code {
+  font-family: OcodoMonoDotZero;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
