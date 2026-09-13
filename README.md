@@ -19,7 +19,7 @@ It is designed to be a lightweight, single-binary tool with configuration provid
 
 ```bash
 export OPENGIST_CLI_TOKEN="your_access_token_here"
-export OPENGIST_CLI_URL="https://your-opengist-instance.com"
+export OPENGIST_CLI_URL="https://your-opengist-instance"
 
 ```
 
