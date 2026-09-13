@@ -1,1 +1,5 @@
 .ruff_cache
+.python-version
+pyproject.toml
+uv.lock
+.venv
