@@ -32,23 +32,23 @@ export const App = () => (
       </div>
 
       <div className="not-prose flex flex-col items-center gap-4">
-        <div className="grid grid-cols-2 gap-5">
-          {PLATFORMS.map((p) => (
-            <a
-              key={p.file}
-              href={`${RELEASE_URL}/downloads/${p.file}`}
-              download={p.file}
-              className="rounded-xl border border-foreground/10 flex flex-col items-center px-3 py-1.5 hover:bg-background/25 transition-colors"
-            >
-              {p.icon}
-              {p.label}
-            </a>
-          ))}
-        </div>
+	<div className="grid grid-cols-2 gap-5">
+	  {PLATFORMS.map((p) => (
+	    <a
+	      key={p.file}
+	      href={`${RELEASE_URL}/downloads/${p.file}`}
+	      download={p.file}
+	      className="rounded-xl border border-foreground/10 flex flex-col items-center px-3 py-1.5 hover:bg-background/25 transition-colors last:col-span-2 last:justify-self-center last:w-1/2"
+	    >
+	      {p.icon}
+	      {p.label}
+	    </a>
+	  ))}
+	</div>
       </div>
 
       <Markdown rehypePlugins={[rehypeHighlight]}>
-        {readme.replace("# Opengist-CLI", "")}
+        {readme}
       </Markdown>
     </article>
   </main>
