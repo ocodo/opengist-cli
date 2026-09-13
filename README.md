@@ -20,14 +20,12 @@ It is designed to be a lightweight, single-binary tool with configuration provid
 ```bash
 export OPENGIST_CLI_TOKEN="your_access_token_here"
 export OPENGIST_CLI_URL="https://your-opengist-instance"
-
 ```
 
 ## Usage
 
 ```bash
 opengist-cli <command> [options]
-
 ```
 
 ### Commands
@@ -42,12 +40,13 @@ For command-specific help run:
 
 ```bash
 opengist-cli <command> --help
-
 ```
 
 ## Installation
 
-### From Source
+Get a single binary download from the [latest release](https://github.com/ocodo/opengist-cli/releases/latest)
+
+### Build From Source
 
 Requires [Go 1.22+](https://go.dev/).
 
