@@ -11,7 +11,7 @@ uv venv
 uv sync
 ```
 
-Will add the dependencies to local `.venv` and install a Python 3.11 interpreter there.
+Will add the dependencies to local `.venv` and install a Python 3.12 interpreter there.
 
 ```
 . .venv/bin/activate
