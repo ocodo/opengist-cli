@@ -46,7 +46,8 @@ pre, code {
 
 @media (prefers-color-scheme: dark) {
     :root {
-	--background: #251F3A;
+    --pre-background: #12141970;
+	--background:#1F1B26;
 	--foreground: oklch(0.985 0 0);
 	--card: oklch(0.205 0 0);
 	--card-foreground: oklch(0.985 0 0);
