@@ -362,10 +362,10 @@ def list_gists(args: argparse.Namespace) -> int:
         "per_page": args.per_page,
     }
 
-    gists_url = get_gists_url()
-
     if args.username:
         gists_url = f"{get_users_url(args.username)}/gists"
+    else:
+        gists_url = get_gists_url()
 
     try:
         response = request(
